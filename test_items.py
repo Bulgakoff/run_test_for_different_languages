@@ -10,7 +10,7 @@ def test_is_button_french(browser):
     # butt_len = len(browser.find_element_by_css_selector("button[value='Ajouter au panier']").text)
     # butt_len = len(browser.find_elements_by_css_selector("button[value='Ajouter au panier']"))# list
     # butt_len = len(browser.find_element_by_xpath(('//button[contains(@value,"Ajouter au panier")]')).text)
-    butt_len = len(browser.find_elements_by_xpath(('//button[contains(@value,"Ajouter au panier")]')))
-    print(f'=========================={butt_len}')
+    butt= browser.find_elements_by_xpath(('//button[contains(@value,"Ajouter au panier")]'))
+    print(f'=========================={butt}')
 
-    assert butt_len > 0, 'NO BUTTON!'
+    assert butt, 'NO BUTTON!'
